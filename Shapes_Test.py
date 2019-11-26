@@ -46,9 +46,10 @@ def test_circle_area():
     circle = Shapes.Circle()
     radius = 2.5
     circle.radius = radius
-    expected = (math.pi * radius) ** 2
+    expected = math.pi * radius ** 2
     actual = circle.area
     print_test_results(Shapes.Circle, desc, expected, actual)
+    print str(circle) + '\n'
 
 def test_square_area():
     desc = 'Returns the the area of a square if we know the length of its side'
@@ -58,6 +59,7 @@ def test_square_area():
     expected = (side) ** 2
     actual = square.area
     print_test_results(Shapes.Square, desc, expected, actual)
+    print str(square) + '\n'
 
 def test_rectangle_area():
     desc = 'Returns the the area of a retangle if we know its height and width'
@@ -70,6 +72,7 @@ def test_rectangle_area():
     expected = area
     actual = rectangle.area
     print_test_results(Shapes.Rectangle, desc, expected, actual)
+    print str(rectangle) + '\n'
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

@@ -41,7 +41,10 @@ class Circle(object):
 
     @property
     def area(self):
-        return (self.__radius * math.pi) ** 2
+        return math.pi * self.__radius ** 2
+
+    def __str__(self):
+        return 'Circle area with a radius of {0} is {1}'.format(self.radius, self.area)
 pass
 
 class Square(object):

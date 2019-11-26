@@ -35,13 +35,6 @@ def main():
 #    - actual = Actual result from calling the function
 #    - func = Function being tested (the actual function, not the name)"""
 #
-def circle_area_test():
-    circle = Circle()
-    radius = 2.5
-    circle.radius = radius
-    expected = math.pi * radius ** 2
-    actual = circle.area
-    print_test_results(func, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 
@@ -56,6 +49,15 @@ def test_circle_area():
     expected = (math.pi * radius) ** 2
     actual = circle.area
     print_test_results(Shapes.Circle, desc, expected, actual)
+
+def test_square_area():
+    desc = 'Returns the the area of a square if we know the length of its side'
+    square = Shapes.Square()
+    side = 3
+    square.side = side
+    expected = (side) ** 2
+    actual = square.area
+    print_test_results(Shapes.Square, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

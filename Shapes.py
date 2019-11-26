@@ -44,5 +44,18 @@ class Circle(object):
         return (self.__radius * math.pi) ** 2
 pass
 
+class Square(object):
+    @property
+    def side(self):
+        return self.__side
+
+    @side.setter
+    def side(self, side):
+        self.__side = side
+
+    @property
+    def area(self):
+        return (self.__side) ** 2
+
 if __name__ == '__main__':
     main()

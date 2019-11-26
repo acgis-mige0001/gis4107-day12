@@ -14,20 +14,6 @@
 def main():
     pass
 
-##class Circle(object):
-
-##class Shapes:
-##    def __init__ (self):
-##        self.type = ''
-##
-##shape1 = Shapes()
-##shape1.type = "circle"
-##
-##shape2 = Shapes()
-##shape2.type = "square"
-##
-##shape3 = Shapes()
-##shape3.type = "rectangle"
 import math
 
 class Circle(object):
@@ -45,7 +31,6 @@ class Circle(object):
 
     def __str__(self):
         return 'Circle area with a radius of {0} is {1}'.format(self.radius, self.area)
-pass
 
 class Square(object):
     @property

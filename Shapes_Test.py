@@ -11,7 +11,10 @@
 
 import sys
 import inspect
+import math
 
+import Shapes
+reload(Shapes)
 # Add import statement for the module under test as follows:
 # import module_under_test as alias
 
@@ -32,16 +35,26 @@ def main():
 #    - actual = Actual result from calling the function
 #    - func = Function being tested (the actual function, not the name)"""
 #
-def template_for_test_functions():
-    desc = ""
-    expected = ""
-    actual = ""
+def circle_area_test():
+    circle = Circle()
+    radius = 2.5
+    circle.radius = radius
+    expected = math.pi * radius ** 2
+    actual = circle.area
     print_test_results(func, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 
 # Create test functions here using the template_for_test_functions above.
 # The name of the test functions needs to begin with "test"
+
+def test_circle_area():
+    circle = Shapes.Circle()
+    radius = 2.5
+    circle.radius = radius
+    expected = math.pi * radius ** 2
+    actual = circle.area
+    print_test_results(func, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

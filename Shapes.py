@@ -57,5 +57,27 @@ class Square(object):
     def area(self):
         return (self.__side) ** 2
 
+class Rectangle(object):
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, width):
+        self.__width = width
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        self.__height = height
+
+    @property
+    def area(self):
+        return (self.__height) * (self.__width)
+
 if __name__ == '__main__':
     main()

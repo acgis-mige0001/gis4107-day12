@@ -59,6 +59,18 @@ def test_square_area():
     actual = square.area
     print_test_results(Shapes.Square, desc, expected, actual)
 
+def test_rectangle_area():
+    desc = 'Returns the the area of a retangle if we know its height and width'
+    rectangle = Shapes.Rectangle()
+    height = 2
+    width = 4
+    rectangle.width = width
+    rectangle.height = height
+    area = height * width
+    expected = area
+    actual = rectangle.area
+    print_test_results(Shapes.Rectangle, desc, expected, actual)
+
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to
 # modified.

@@ -59,6 +59,8 @@ class Square(object):
     @property
     def area(self):
         return (self.__side) ** 2
+    def __str__(self):
+        return 'Square area with a side of {0} is {1}'.format(self.side, self.area)
 
 class Rectangle(object):
 
@@ -81,6 +83,9 @@ class Rectangle(object):
     @property
     def area(self):
         return (self.__height) * (self.__width)
+
+    def __str__(self):
+        return 'Rectangle area with a width of {0} and height of {1} is {2}'.format(self.width, self.height, self.area)
 
 if __name__ == '__main__':
     main()

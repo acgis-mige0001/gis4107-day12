@@ -28,6 +28,7 @@ def main():
 ##
 ##shape3 = Shapes()
 ##shape3.type = "rectangle"
+import math
 
 class Circle(object):
     @property
@@ -35,12 +36,12 @@ class Circle(object):
         return self.__radius
 
     @radius.setter
-    def radius(self, circle_radius):
-        self.__circle_radius = radius
+    def radius(self, radius):
+        self.__radius = radius
 
     @property
     def area(self):
-        return self._radius * math.pi ** 2
+        return (self.__radius * math.pi) ** 2
 pass
 
 if __name__ == '__main__':

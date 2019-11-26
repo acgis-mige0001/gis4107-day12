@@ -49,12 +49,13 @@ def circle_area_test():
 # The name of the test functions needs to begin with "test"
 
 def test_circle_area():
+    desc = 'Returns the the area of a circle if we know its radius'
     circle = Shapes.Circle()
     radius = 2.5
     circle.radius = radius
-    expected = math.pi * radius ** 2
+    expected = (math.pi * radius) ** 2
     actual = circle.area
-    print_test_results(func, desc, expected, actual)
+    print_test_results(Shapes.Circle, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

@@ -46,7 +46,7 @@ def template_for_test_functions():
 # Create test functions here using the template_for_test_functions above.
 # The name of the test functions needs to begin with "test"
 
-def test_circle_area():
+def test_point_location():
     desc = 'Returns the x and y values of a point'
     x = 2.5
     y = 3.3

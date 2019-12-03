@@ -77,6 +77,35 @@ def test_line_length():
     print_test_results(Geometry.Line, desc, expected, actual)
     print str(line) + '\n'
 
+def test_polyline_length():
+    desc = 'Returns the total length of a polyline'
+
+    x1 = 2.5
+    x2 = 4.5
+    x3 = 7.5
+    y1 = 3.3
+    y2 = 6.3
+    y3 = 8.8
+
+    from_point = Geometry.Point(x1, y1)
+    to_point = Geometry.Point(x2, y2)
+    to_point2 = Geometry.Point(x3,y3)
+
+    line = Geometry.Line(from_point, to_point)
+    line2 = Geometry.Line(to_point, to_point2)
+
+    polyline = Geometry.Polyline()
+    polyline.add_segment(line)
+    polyline.add_segment(line2)
+
+    length1 = (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+    length2 = (((x3 - x2)**2) + ((y3 - y2)**2))**0.5
+
+    expected = float(length1 + length2)
+    actual = polyline.total_length()
+    print_test_results(Geometry.Polyline, desc, expected, actual)
+    print str(polyline) + '\n'
+
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

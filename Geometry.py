@@ -36,9 +36,23 @@ class Line(object):
     def __str__(self):
         return 'The length of a line with point coordinates of ({0}, {1}), ({2}, {3})'.format(self.from_point.x, self.from_point.y, self.to_point.x, self.to_point.y)
 
+class Polyline(object):
 
+    def __init__ (self):
+        self.segments = []
+        self.length = 0
 
+    def add_segment(self, seg):
+        self.segments.append(seg)
 
+    def total_length(self):
+        self.length = 0
+        for i in self.segments:
+            self.length += i.get_length()
+        return self.length
+
+    def __str__(self):
+        return 'Polyline length = {}'.format(self.length)
 
 if __name__ == '__main__':
     main()

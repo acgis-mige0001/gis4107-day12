@@ -53,7 +53,7 @@ def main():
 # The name of the test functions needs to begin with "test"
 
 def test_circle_area():
-    desc = 'Returns the the area of a circle if we know its radius'
+    desc = 'Returns the area of a circle if we know its radius'
     circle = Shapes.Circle()
     radius = 2.5
     circle.radius = radius
@@ -63,7 +63,7 @@ def test_circle_area():
     print str(circle) + '\n'
 
 def test_square_area():
-    desc = 'Returns the the area of a square if we know the length of its side'
+    desc = 'Returns the area of a square if we know the length of its side'
     square = Shapes.Square()
     side = 3
     square.side = side
@@ -73,7 +73,7 @@ def test_square_area():
     print str(square) + '\n'
 
 def test_rectangle_area():
-    desc = 'Returns the the area of a retangle if we know its height and width'
+    desc = 'Returns the area of a retangle if we know its height and width'
     rectangle = Shapes.Rectangle()
     height = 2
     width = 4

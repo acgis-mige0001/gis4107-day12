@@ -60,6 +60,24 @@ def test_point_location():
     print_test_results(Geometry.Point, desc, expected, actual)
     print str(point) + '\n'
 
+def test_line_length():
+    desc = 'Returns the length of a line if given the X, Y coordinates of its points'
+    x1 = 2.5
+    x2 = 4.5
+    y1 = 3.3
+    y2 = 6.3
+    from_point = Geometry.Point(x1, y1)
+    to_point = Geometry.Point(x2, y2)
+
+    line = Geometry.Line(from_point,to_point)
+    length = (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+
+    expected = float(length)
+    actual = line.get_length()
+    print_test_results(Geometry.Line, desc, expected, actual)
+    print str(line) + '\n'
+
+
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to
 # modified.
